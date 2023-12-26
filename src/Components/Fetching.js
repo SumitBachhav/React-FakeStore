@@ -2,18 +2,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Body from "./Body";
 
-
-function Fetching() {
+function Fetching(props) {
   const [dataArray, setDataArray] = useState([]);
   useEffect(() => {
     (async () => {
-      const response = await axios.get(
-        
-        "https://fakestoreapi.com/products"
-      );
+      const response = await axios.get(props.apiUrl);
+      console.log(response)
       setDataArray(response.data);
     })();
-  }, []);
+  }, [props.apiUrl]);
 
   return (
     <>
@@ -41,6 +38,3 @@ function Fetching() {
 }
 
 export default Fetching;
-
-
-//"https://fakestoreapi.com/products?limit=12"
