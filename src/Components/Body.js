@@ -1,170 +1,39 @@
-import React from 'react'
+import React from "react";
 
-function Body() {
+function Body(props) {
   return (
-    <div>
-      <div className="row">
-            <div className="column" >
-                <div className="card">
-                <img src="img1.jpg" alt="Jane" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>Jane Doe</h2>
-                    <p className="title">CEO &amp; Founder</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-
-            <div className="column">
-                <div className="card">
-                <img src="img2.jpg" alt="Mike" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>Mike Ross</h2>
-                    <p className="title">Art Director</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-
-            <div className="column">
-                <div className="card">
-                <img src="img3.jpg" alt="John" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>John Doe</h2>
-                    <p className="title">Designer</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
+    props.title && (
+      <div className="container">
+        <div className="card my-2">
+          <span
+            className="badge rounded-pill bg-danger"
+            style={{
+              display: "flex",
+              right: "0",
+              position: "absolute",
+              justifyContent: "flex-end",
+            }}
+          >
+            {props.rating.rate}‎ ‎ ({props.rating.count})
+          </span>
+          <img src={props.imageUrl} className="card-img-top" alt="itemImage" />
+          <div className="card-body">
+            <h5 className="card-title">{props.title}</h5>
+            <p className="card-text">{props.description}</p>
+            <p className="card-text">
+              <strong>Rs. {props.price}</strong>
+            </p>
+            <a href="/" className="btn btn-success mx-2">
+              Buy
+            </a>
+            <a href="/" className="btn btn-outline-success">
+              Add to cart
+            </a>
+          </div>
         </div>
-      <div className="row">
-            <div className="column" >
-                <div className="card">
-                <img src="img1.jpg" alt="Jane" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>Jane Doe</h2>
-                    <p className="title">CEO &amp; Founder</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-
-            <div className="column">
-                <div className="card">
-                <img src="img2.jpg" alt="Mike" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>Mike Ross</h2>
-                    <p className="title">Art Director</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-
-            <div className="column">
-                <div className="card">
-                <img src="img3.jpg" alt="John" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>John Doe</h2>
-                    <p className="title">Designer</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-        </div>
-      <div className="row">
-            <div className="column" >
-                <div className="card">
-                <img src="img1.jpg" alt="Jane" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>Jane Doe</h2>
-                    <p className="title">CEO &amp; Founder</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-
-            <div className="column">
-                <div className="card">
-                <img src="img2.jpg" alt="Mike" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>Mike Ross</h2>
-                    <p className="title">Art Director</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-
-            <div className="column">
-                <div className="card">
-                <img src="img3.jpg" alt="John" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>John Doe</h2>
-                    <p className="title">Designer</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-        </div>
-      <div className="row">
-            <div className="column" >
-                <div className="card">
-                <img src="img1.jpg" alt="Jane" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>Jane Doe</h2>
-                    <p className="title">CEO &amp; Founder</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-
-            <div className="column">
-                <div className="card">
-                <img src="img2.jpg" alt="Mike" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>Mike Ross</h2>
-                    <p className="title">Art Director</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-
-            <div className="column">
-                <div className="card">
-                <img src="img3.jpg" alt="John" style={{width:'100%'}}/>
-                <div className="container">
-                    <h2>John Doe</h2>
-                    <p className="title">Designer</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>example@example.com</p>
-                    <p><button className="button">Contact</button></p>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  )
+      </div>
+    )
+  );
 }
 
-export default Body
+export default Body;
