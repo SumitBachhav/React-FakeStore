@@ -1,6 +1,5 @@
 import "./App.css";
 import Fetching from "./Components/Fetching";
-import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -17,7 +16,6 @@ function App() {
           <Route exact path="womensclothing/" element={<Fetching apiUrl = "https://fakestoreapi.com/products/category/women's%20clothing" />} />
         </Routes>
         <Fetching />
-        <Footer />
       </Router>
     </div>
   );
