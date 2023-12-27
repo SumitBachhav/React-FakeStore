@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SingleProduct from './Components/SingleProduct'
 
 function App() {
+  document.title="fake store"
   return (
     <div>
       <Router>
