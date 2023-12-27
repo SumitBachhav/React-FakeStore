@@ -7,7 +7,7 @@ function Fetching(props) {
   useEffect(() => {
     (async () => {
       const response = await axios.get(props.apiUrl);
-      console.log(response)
+      // console.log(response)
       setDataArray(response.data);
     })();
   }, [props.apiUrl]);
